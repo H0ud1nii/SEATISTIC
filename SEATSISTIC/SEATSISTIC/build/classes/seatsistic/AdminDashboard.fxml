@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="DashboardPane" prefHeight="720.0" prefWidth="1280.0" stylesheets="@styling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seatsistic.AdminDashboardController">
+   <children>
+      <HBox alignment="TOP_RIGHT" layoutX="320.0" prefHeight="70.0" prefWidth="960.0" styleClass="DashboardMenu" AnchorPane.leftAnchor="320.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label prefHeight="30.0" prefWidth="260.0" text="Manage Games, and teams." textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="-200.0" />
+               </HBox.margin>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="155.0" text="More comming soon.." textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="-260.0" top="35.0" />
+               </HBox.margin>
+            </Label>
+            <Button graphicTextGap="0.0" mnemonicParsing="false" onAction="#minimizeButton" prefHeight="0.0" prefWidth="0.0" styleClass="Close-button">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="MINUS" size="20" />
+               </graphic>
+               <HBox.margin>
+                  <Insets left="700.0" />
+               </HBox.margin>
+            </Button>
+            <Button graphicTextGap="0.0" mnemonicParsing="false" onAction="#maximizeButton" prefHeight="0.0" prefWidth="0.0" styleClass="Close-button">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="WINDOWS" size="20" />
+               </graphic>
+            </Button>
+            <Button graphicTextGap="0.0" mnemonicParsing="false" onAction="#closeButton" prefHeight="0.0" prefWidth="0.0" styleClass="Close-button">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="20" />
+               </graphic>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <VBox prefHeight="720.0" prefWidth="320.0" styleClass="DashboardMenu" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="168.0" fitWidth="208.0" layoutX="76.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/SEATSISTIC-LOGO2.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="320.0" styleClass="DashboardMenuButton" stylesheets="@styling.css" text="Teams">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="GROUP" size="22" />
+               </graphic>
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="320.0" styleClass="DashboardMenuButton" stylesheets="@styling.css" text="Games">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SOCCER_BALL_ALT" />
+               </graphic></Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="56.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="320.0" styleClass="DashboardMenuButton" stylesheets="@styling.css" text="Leagues">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="TROPHY" size="22" />
+               </graphic></Button>
+         </children>
+      </VBox>
+      <Pane fx:id="DashboardContentBox" layoutX="320.0" layoutY="70.0" prefHeight="650.0" prefWidth="960.0" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="70.0" />
+   </children>
+</AnchorPane>
