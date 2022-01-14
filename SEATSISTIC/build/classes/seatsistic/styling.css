@@ -3,7 +3,7 @@
 }
 
 .SignUp-pane {
-    -fx-background-color: #34af72;
+    -fx-background-color: #34AF72;
 }
 
 .Close-button{
@@ -28,7 +28,7 @@
 }
 
 .SignUp-Form{
-    -fx-background-color: #0f422c;
+    -fx-background-color: #0F422C;
 }
 
 .tf_box{
@@ -40,4 +40,19 @@
 
 .tf{
     -fx-background-color: transparent;
+}
+
+.DashboardMenu{
+    -fx-background-color: #0F422C;
+}
+
+.DashboardMenuButton{
+    -fx-background-color: transparent;
+    -fx-text-fill: #FFFFFF;
+}
+
+.DashboardMenuButton:hover{
+    -fx-background-color: transparent;
+    -fx-text-fill: #FFFFFF;
+    -fx-opacity: 0.3;
 }

@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="480.0" styleClass="SignUp-Form" stylesheets="@styling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="480.0" styleClass="SignUp-Form" stylesheets="@styling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seatsistic.SignInController">
    <children>
       <Label text="Login" textFill="WHITE">
          <font>
@@ -42,7 +42,7 @@
             <Insets left="15.0" right="15.0" top="15.0" />
          </VBox.margin>
       </HBox>
-      <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="635.0" styleClass="SignUp-button" text="Sign In" VBox.vgrow="ALWAYS">
+      <Button mnemonicParsing="false" onAction="#openAdminDashboard" prefHeight="27.0" prefWidth="635.0" styleClass="SignUp-button" text="Sign In" VBox.vgrow="ALWAYS">
          <VBox.margin>
             <Insets left="15.0" right="15.0" top="15.0" />
          </VBox.margin>

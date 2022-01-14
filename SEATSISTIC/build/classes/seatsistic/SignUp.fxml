@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="480.0" styleClass="SignUp-Form" stylesheets="@styling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="480.0" styleClass="SignUp-Form" stylesheets="@styling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seatsistic.SignUpController">
    <children>
       <Label text="Sign Up" textFill="WHITE">
          <font>
@@ -70,6 +70,15 @@
       <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0">
          <children>
             <PasswordField accessibleRole="PASSWORD_FIELD" promptText="Password" styleClass="tf_box" HBox.hgrow="ALWAYS" />
+            <FontAwesomeIconView fill="WHITE" glyphName="LOCK" size="1.3em" />
+         </children>
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" top="15.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="283.0" prefHeight="40.0" prefWidth="200.0">
+         <children>
+            <PasswordField accessibleRole="PASSWORD_FIELD" promptText="Confirm Password" styleClass="tf_box" HBox.hgrow="ALWAYS" />
             <FontAwesomeIconView fill="WHITE" glyphName="LOCK" size="1.3em" />
          </children>
          <VBox.margin>
