@@ -56,3 +56,40 @@
     -fx-text-fill: #FFFFFF;
     -fx-opacity: 0.3;
 }
+
+.AddingButton {
+    -fx-background-color: #34AF72;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #34AF72;
+    -fx-border-width: 5px;
+}
+
+.AddingButton:hover {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #34AF72;
+    -fx-border-color: #34AF72;
+}
+
+.SearchingFied{
+    -fx-background-color: #34AF72;
+    -fx-border-color: #FFFFFF;
+    -fx-border-width: 0px 0px 1px 0px;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-radius: 0px;
+}
+
+.SearchingButton{
+    -fx-background-color: #0F422C;
+    -fx-border-radius: 0px;
+}
+
+.Table{
+    -fx-border-color: #34AF72;
+    -fx-border-width: 2px;
+}
+
+.TableColumn{
+    -fx-text-fill: #34AF72;
+    -fx-border-color: #34AF72;
+    -fx-border-width: 2px 0px 2px 2px;
+}
