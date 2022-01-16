@@ -21,10 +21,10 @@
                   <Font name="System Bold" size="20.0" />
                </font>
                <HBox.margin>
-                  <Insets left="-200.0" />
+                  <Insets left="-250.0" />
                </HBox.margin>
             </Label>
-            <Label prefHeight="17.0" prefWidth="155.0" text="More comming soon.." textFill="WHITE">
+            <Label prefHeight="17.0" prefWidth="189.0" text="More comming soon.." textFill="WHITE">
                <HBox.margin>
                   <Insets left="-260.0" top="35.0" />
                </HBox.margin>
@@ -36,11 +36,6 @@
                <HBox.margin>
                   <Insets left="700.0" />
                </HBox.margin>
-            </Button>
-            <Button graphicTextGap="0.0" mnemonicParsing="false" onAction="#maximizeButton" prefHeight="0.0" prefWidth="0.0" styleClass="Close-button">
-               <graphic>
-                  <FontAwesomeIconView fill="WHITE" glyphName="WINDOWS" size="20" />
-               </graphic>
             </Button>
             <Button graphicTextGap="0.0" mnemonicParsing="false" onAction="#closeButton" prefHeight="0.0" prefWidth="0.0" styleClass="Close-button">
                <graphic>
@@ -66,7 +61,7 @@
                   </ImageView>
                </children>
             </Pane>
-            <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="320.0" styleClass="DashboardMenuButton" stylesheets="@styling.css" text="Teams">
+            <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#openTeamsAdmin" prefHeight="60.0" prefWidth="320.0" styleClass="DashboardMenuButton" stylesheets="@styling.css" text="Teams">
                <graphic>
                   <FontAwesomeIconView fill="WHITE" glyphName="GROUP" size="22" />
                </graphic>
@@ -80,7 +75,7 @@
                <graphic>
                   <FontAwesomeIconView fill="WHITE" glyphName="SOCCER_BALL_ALT" />
                </graphic></Button>
-            <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="56.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="320.0" styleClass="DashboardMenuButton" stylesheets="@styling.css" text="Leagues">
+            <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="56.0" mnemonicParsing="false" onAction="#openLeagueAdmin" prefHeight="60.0" prefWidth="320.0" styleClass="DashboardMenuButton" stylesheets="@styling.css" text="Leagues">
                <font>
                   <Font size="20.0" />
                </font>
@@ -89,6 +84,6 @@
                </graphic></Button>
          </children>
       </VBox>
-      <Pane fx:id="DashboardContentBox" layoutX="320.0" layoutY="70.0" prefHeight="650.0" prefWidth="960.0" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="70.0" />
+      <AnchorPane fx:id="DashboardContentBox" layoutX="320.0" layoutY="70.0" prefHeight="650.0" prefWidth="960.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="320.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0" />
    </children>
 </AnchorPane>
