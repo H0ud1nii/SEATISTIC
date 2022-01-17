@@ -21,8 +21,9 @@
          <children>
             <TableView fx:id="teamstableview" prefHeight="320.0" prefWidth="900.0" styleClass="Table">
                <columns>
-                  <TableColumn fx:id="TeamName" minWidth="450.0" prefWidth="465.0" styleClass="TableColumn" text="TeamName" />
-                  <TableColumn fx:id="TeamLogo" minWidth="450.0" prefWidth="465.0" styleClass="TableColumn" text="TeamLogo" />
+                  <TableColumn fx:id="TeamName" maxWidth="600.0" minWidth="600.0" prefWidth="600.0" resizable="false" styleClass="TableColumn" text="TeamName" />
+                  <TableColumn fx:id="TeamLogo" maxWidth="400.0" minWidth="191.0" prefWidth="191.0" resizable="false" styleClass="TableColumn" text="TeamLogo" />
+                  <TableColumn fx:id="TeamDelete" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" resizable="false" styleClass="TableColumn" text="Delete" />
                </columns>
             </TableView>
          </children>
@@ -33,6 +34,14 @@
          </font>
       </Button>
       <TextField fx:id="txt_name" layoutX="305.0" layoutY="85.0" prefHeight="35.0" prefWidth="350.0" promptText="Team Name" />
-      <TextField fx:id="txt_logo" layoutX="305.0" layoutY="135.0" prefHeight="35.0" prefWidth="350.0" promptText="Team Logo" />
+      <TextField fx:id="txt_logo" editable="false" layoutX="305.0" layoutY="135.0" prefHeight="35.0" prefWidth="350.0" promptText="Team Logo" />
+      <Button fx:id="btn_Upload" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="177.0" layoutY="131.0" mnemonicParsing="false" onAction="#logoChooser" styleClass="UploadButton" stylesheets="@styling.css" text="Upload">
+         <graphic>
+            <FontAwesomeIconView fill="#34af72" glyphName="CLOUD_UPLOAD" size="22" />
+         </graphic>
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

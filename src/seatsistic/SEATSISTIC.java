@@ -15,6 +15,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import static seatsistic.GlobalConfiguration.makeSceneMoveable;
 
 
 /**
@@ -23,10 +24,6 @@ import javafx.stage.StageStyle;
  */
 public class SEATSISTIC extends Application {
     
-    private double xNull = 0;
-    private double yNull = 0;
-
-
     @Override
     public void start(Stage stage) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
@@ -34,21 +31,7 @@ public class SEATSISTIC extends Application {
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);
         stage.initStyle(StageStyle.TRANSPARENT);
-
-        root.setOnMousePressed(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                xNull = event.getSceneX();
-                yNull = event.getSceneY();
-            }
-        });
-        root.setOnMouseDragged(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                stage.setX(event.getScreenX() - xNull);
-                stage.setY(event.getScreenY() - yNull);
-            }
-        }); 
+        makeSceneMoveable(root, stage);
 
         stage.setScene(scene);
         stage.show();

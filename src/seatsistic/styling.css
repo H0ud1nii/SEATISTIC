@@ -83,13 +83,26 @@
     -fx-border-radius: 0px;
 }
 
+.UploadButton{
+    -fx-background-color: transparent;
+    -fx-text-fill: #34AF72;
+}
+
+.UploadButton:hover{
+    -fx-border-color: #34AF72;
+    -fx-border-width: 0px 0px 1px 1px;
+}
+
 .Table{
     -fx-border-color: #34AF72;
     -fx-border-width: 2px;
 }
 
 .TableColumn{
-    -fx-text-fill: #34AF72;
+    -fx-text-fill: #000000;
     -fx-border-color: #34AF72;
     -fx-border-width: 2px 0px 2px 2px;
+    -fx-alignment: center;
+    -fx-font-size: 15pt ;
+    -fx-font-weight: bold;
 }

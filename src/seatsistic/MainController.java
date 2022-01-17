@@ -50,7 +50,8 @@ public class MainController implements Initializable {
         stage = (Stage) FormPane.getScene().getWindow();
         stage.close();
     }
-    public void open_signin(ActionEvent event){
+    
+    public void openSignIn(ActionEvent event){
         TranslateTransition SlideForms = new TranslateTransition(Duration.seconds(1), FormBox);
         SlideForms.setToX(FormBox.getLayoutX() * 31);
         SlideForms.play();
@@ -64,7 +65,8 @@ public class MainController implements Initializable {
             }
         });
     }    
-    public void open_signup(ActionEvent event){
+    
+    public void openSignUp(ActionEvent event){
         TranslateTransition SlideForms = new TranslateTransition(Duration.seconds(1), FormBox);
         SlideForms.setToX(0);
         SlideForms.play();

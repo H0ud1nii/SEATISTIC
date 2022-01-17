@@ -36,39 +36,50 @@ public class AdminDashboardController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-            try{
-                root = FXMLLoader.load(getClass().getResource("TeamsAdministration.fxml"));
-                DashboardContentBox.getChildren().removeAll();
-                DashboardContentBox.getChildren().setAll(root);
-            }catch(IOException ex) {
+        try{
+            root = FXMLLoader.load(getClass().getResource("TeamsAdministration.fxml"));
+            DashboardContentBox.getChildren().removeAll();
+            DashboardContentBox.getChildren().setAll(root);
+        }catch(IOException ex) {
 
-            }
+        }
     }
 
     public void openTeamsAdmin(ActionEvent event) throws IOException{
         try{
-                root = FXMLLoader.load(getClass().getResource("TeamsAdministration.fxml"));
-                DashboardContentBox.getChildren().removeAll();
-                DashboardContentBox.getChildren().setAll(root);
-            }catch(IOException ex) {
+            root = FXMLLoader.load(getClass().getResource("TeamsAdministration.fxml"));
+            DashboardContentBox.getChildren().removeAll();
+            DashboardContentBox.getChildren().setAll(root);
+        }catch(IOException ex) {
 
-            }
+        }
     }
+
+    public void openMatchesAdmin(ActionEvent event) throws IOException{
+        try{
+            root = FXMLLoader.load(getClass().getResource("MacthesAdministration.fxml"));
+            DashboardContentBox.getChildren().removeAll();
+            DashboardContentBox.getChildren().setAll(root);
+        }catch(IOException ex) {
+
+        }
+    }
+    
     public void openLeagueAdmin(ActionEvent event) throws IOException{
         try{
-                root = FXMLLoader.load(getClass().getResource("LeagueAdministration.fxml"));
-                DashboardContentBox.getChildren().removeAll();
-                DashboardContentBox.getChildren().setAll(root);
-            }catch(IOException ex) {
+            root = FXMLLoader.load(getClass().getResource("LeagueAdministration.fxml"));
+            DashboardContentBox.getChildren().removeAll();
+            DashboardContentBox.getChildren().setAll(root);
+        }catch(IOException ex) {
 
-            }
+        }
     }
-
 
     public void closeButton(ActionEvent event){
         stage = (Stage) DashboardPane.getScene().getWindow();
         stage.close();
     }  
+
     public void minimizeButton(ActionEvent event){
         stage = (Stage) DashboardPane.getScene().getWindow();
         stage.setIconified(true);

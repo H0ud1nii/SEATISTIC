@@ -4,7 +4,7 @@
  */
 package seatsistic;
 
-import javafx.beans.property.SimpleStringProperty;
+import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 
 /**
@@ -12,56 +12,53 @@ import javafx.scene.image.ImageView;
  * @author the_k
  */
 
-/* public class Team {
-    String teamName;
-    String teamLogo;
+public class Team {
+    private int id;
+    private String name;
+    private ImageView logo;
+    private Button delete; 
 
-
-    public Team() {
+    public Team(){
         
     }
-    public Team(String teamname, String teamlogo) {
-        super();
-        this.teamName = teamname;
-        this.teamLogo = teamlogo;
+
+    public Team(int id, String name, ImageView logo, Button delete) {
+        this.id = id;
+        this.name = name;
+        this.logo = logo;
+        this.delete = delete;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
     public String getName(){
-        return teamName;
+        return name;
     }
-    public void setName(String teamname) {
-        this.teamName = teamname;
+    
+    public void setName(String name) {
+        this.name = name;
     }
-    public String getLogo(){
-        return teamLogo;
-    }
-    public void setLogo(String teamlogo) {
-        this.teamLogo = teamlogo;
-    }  */
-
-
-    public class Team {
-    String teamName;
-    ImageView teamLogo; 
-
-    public Team() {
-
-    }
-
-    public Team(String teamname, ImageView teamlogo) {
-        this.teamName = teamname;
-        this.teamLogo = teamlogo;
-    }
-    public String getName(){
-        return teamName;
-    }
-    public void setName(String teamname) {
-        this.teamName = teamname;
-    }
+    
     public ImageView getLogo(){
-        return teamLogo;
+        return logo;
     }
-    public void setLogo(ImageView teamlogo) {
-        this.teamLogo = teamlogo;
-    } 
+    
+    public void setLogo(ImageView logo) {
+        this.logo = logo;
+    }
 
+    public Button getDelete() {
+        return delete;
+    }
+
+    public void setDelete(Button delete) {
+        this.delete = delete;
+    }
+    
 }
