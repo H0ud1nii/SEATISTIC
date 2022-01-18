@@ -57,7 +57,7 @@ public class AdminDashboardController implements Initializable {
 
     public void openMatchesAdmin(ActionEvent event) throws IOException{
         try{
-            root = FXMLLoader.load(getClass().getResource("MacthesAdministration.fxml"));
+            root = FXMLLoader.load(getClass().getResource("MatchesAdministration.fxml"));
             DashboardContentBox.getChildren().removeAll();
             DashboardContentBox.getChildren().setAll(root);
         }catch(IOException ex) {
