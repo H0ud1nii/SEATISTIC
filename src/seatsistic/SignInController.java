@@ -48,6 +48,15 @@ public class SignInController implements Initializable {
         makeSceneMoveable(root, stage);
         stage.show();
     }
+    
+    public void openUserDashboard(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("UserDashboard.fxml"));
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        makeSceneMoveable(root, stage);
+        stage.show();
+    }
 
     public void signIn(ActionEvent event) throws ClassNotFoundException, SQLException, IOException{
         String username = tf_username.getText().toLowerCase();
@@ -61,7 +70,7 @@ public class SignInController implements Initializable {
 
         if(res.next()){
             if(BCrypt.checkpw(password, res.getString("password"))){
-                openAdminDashboard(event);
+                openUserDashboard(event);
                 System.out.println("Sign In Success");
 
             }

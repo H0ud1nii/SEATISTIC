@@ -106,3 +106,33 @@
     -fx-font-size: 15pt ;
     -fx-font-weight: bold;
 }
+
+.UserMenu {
+    -fx-background-color: #208251;
+}
+
+.DateContainer{
+    -fx-text-fill: #208251; 
+}
+
+.TimeContainer{
+    -fx-text-fill: #208251; 
+}
+
+.HomeTeam {
+    -fx-text-fill: #F5F5F5; 
+}
+
+.AwayTeam {
+    -fx-text-fill: #F5F5F5;
+}
+
+.MatchContainer {
+    -fx-border-color: #34AF72;
+    -fx-border-width: 0px 0px 2px 2px;
+}
+
+.MatchContainerButton {
+    -fx-background-color: #F5F5F5;
+}
+
