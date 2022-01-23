@@ -136,3 +136,51 @@
     -fx-background-color: #F5F5F5;
 }
 
+.SeatsButton {
+    -fx-background-color: transparent;
+}
+
+.PaneKey{
+    -fx-background-color: #00000070;
+    -fx-border-width: 5px;
+    -fx-border-color: #34AF72;
+}
+
+.ReserveButton{
+    -fx-background-color: #20825170;
+    -fx-border-width: 2px;
+    -fx-border-color: #208251;
+}
+
+.ReserveButton:hover{
+    -fx-background-color: #208251;
+    -fx-border-width: 2px;
+    -fx-border-color: #208251;
+}
+
+.PriceLabel{
+    -fx-background-color: #20825170;
+    -fx-border-width: 2px;
+    -fx-border-color: #208251;
+}
+
+.LogoutButton{
+    -fx-background-color: #FFFFFF70;
+    -fx-border-width: 2px;
+    -fx-border-color: #FFFFFF;
+    
+}.LogoutButton:hover{
+    -fx-text-fill: #0F422C;
+}
+
+.DashboardPane {
+    -fx-background-color: transparent;
+}
+
+.ReceiptContent {
+    -fx-background-color: #F5F5F5;
+}
+
+.diaglogPane {
+    -fx-background-color: #F5F5F5;
+}

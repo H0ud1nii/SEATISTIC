@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<DialogPane fx:id="DialogPane" blendMode="MULTIPLY" prefWidth="300.0" styleClass="diaglogPane" stylesheets="@styling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seatsistic.ReceiptController">
+   <graphic>
+      <AnchorPane fx:id="ListPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="300.0" styleClass="ReceiptContent">
+         <children>
+            <Label layoutX="50.0" layoutY="15.0" text="Invoice Number:" />
+            <Label fx:id="invoiceNumber" layoutX="150.0" layoutY="15.0" text="Label" />
+            <Line endX="100.0" layoutX="150.0" layoutY="35.0" startX="-100.0" />
+            <Label layoutX="50.0" layoutY="35.0" text="First name:" />
+            <Label fx:id="FirstName" layoutX="150.0" layoutY="35.0" text="Label" />
+            <Line endX="100.0" layoutX="150.0" layoutY="55.0" startX="-100.0" />
+            <Label layoutX="50.0" layoutY="55.0" text="Last name;" />
+            <Label fx:id="LastName" layoutX="150.0" layoutY="55.0" text="Label" />
+            <Line endX="100.0" layoutX="150.0" layoutY="75.0" startX="-100.0" />
+            <Label layoutX="50.0" layoutY="75.0" text="Email: " />
+            <Label fx:id="EmailAddress" layoutX="150.0" layoutY="75.0" text="Label" />
+            <Line endX="100.0" layoutX="150.0" layoutY="95.0" startX="-100.0" />
+            <Label layoutX="50.0" layoutY="95.0" text="Username:" />
+            <Label fx:id="Username" layoutX="150.0" layoutY="95.0" text="Label" />
+            <Line endX="100.0" layoutX="150.0" layoutY="115.0" startX="-100.0" />
+            <Label layoutX="50.0" layoutY="115.0" text="Date of purchase" />
+            <Label fx:id="DateOfPurchase" layoutX="150.0" layoutY="115.0" text="Label" />
+            <Line endX="100.0" layoutX="150.0" layoutY="135.0" startX="-100.0" />
+            <Label layoutX="50.0" layoutY="135.0" text="Match id:" />
+            <Label fx:id="MatchID" layoutX="150.0" layoutY="135.0" text="Label" />
+            <Line endX="100.0" layoutX="150.0" layoutY="155.0" startX="-100.0" />
+            <Label fx:id="HomeTeam" layoutY="190.0" text="Home Team" AnchorPane.rightAnchor="70.0" />
+            <Label fx:id="AwayTeam" layoutY="290.0" text="Away Team" AnchorPane.rightAnchor="70.0" />
+            <ImageView fx:id="HomeLogo" fitHeight="50.0" fitWidth="50.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="165.0">
+               <image>
+                  <Image url="@../img/logos/al_ahed.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="AwayLogo" fitHeight="50.0" fitWidth="50.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="165.0">
+               <image>
+                  <Image url="@../img/logos/nejme.png" />
+               </image>
+            </ImageView>
+            <Label layoutY="220.0" text="VS" textAlignment="CENTER" textFill="RED" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="125.0">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="150.0" layoutY="335.0" startX="-100.0" />
+            <Label layoutX="55.0" layoutY="345.0" text="Number of seats:" />
+            <Label fx:id="NumberOfSeats" layoutX="200.0" layoutY="345.0" text="Label" />
+            <Label layoutX="55.0" layoutY="365.0" text="Price Per Seats:" />
+            <Label fx:id="PricePerSeat" layoutX="200.0" layoutY="365.0" text="Label" />
+            <Label layoutX="55.0" layoutY="385.0" text="Total Price:" />
+            <Label fx:id="TotalPrice" layoutX="200.0" layoutY="385.0" text="Label" />
+            <Button mnemonicParsing="false" text="Save/Print" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+            <Button layoutY="460.0" mnemonicParsing="false" onAction="#closeButton" text="Close" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" />
+         </children>
+      </AnchorPane>
+   </graphic>
+</DialogPane>

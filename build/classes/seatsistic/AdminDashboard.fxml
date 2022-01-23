@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="DashboardPane" prefHeight="720.0" prefWidth="1280.0" stylesheets="@styling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seatsistic.AdminDashboardController">
+<AnchorPane id="AnchorPane" fx:id="DashboardPane" prefHeight="720.0" prefWidth="1280.0" styleClass="DashboardPane" stylesheets="@styling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seatsistic.AdminDashboardController">
    <children>
       <HBox alignment="TOP_RIGHT" layoutX="320.0" prefHeight="70.0" prefWidth="960.0" styleClass="DashboardMenu" AnchorPane.leftAnchor="320.0" AnchorPane.rightAnchor="0.0">
          <children>
@@ -82,6 +82,14 @@
                <graphic>
                   <FontAwesomeIconView fill="WHITE" glyphName="TROPHY" size="22" />
                </graphic></Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="330.0" mnemonicParsing="false" onAction="#openLeagueAdmin" prefHeight="60.0" prefWidth="320.0" styleClass="LogoutButton" stylesheets="@styling.css" text="                 Logout" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="280.0" />
+               </VBox.margin>
+            </Button>
          </children>
       </VBox>
       <AnchorPane fx:id="DashboardContentBox" layoutX="320.0" layoutY="70.0" prefHeight="650.0" prefWidth="960.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="320.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0" />

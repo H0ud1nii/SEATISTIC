@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="FormPane" prefHeight="680.0" prefWidth="980.0" style="-fx-background-color: TRANSPARENT;" styleClass="SignUp-parent" stylesheets="@styling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seatsistic.MainController">
+<AnchorPane fx:id="FormPane" prefHeight="680.0" prefWidth="980.0" style="-fx-background-color: transparent;" styleClass="FormPane" stylesheets="@styling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seatsistic.MainController">
    <children>
       <Pane fx:id="progPane" layoutY="140.0" prefHeight="400.0" prefWidth="980.0" styleClass="SignUp-pane">
          <children>

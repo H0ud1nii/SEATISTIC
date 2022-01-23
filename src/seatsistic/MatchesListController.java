@@ -4,21 +4,25 @@
  */
 package seatsistic;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.animation.RotateTransition;
+import javafx.animation.ScaleTransition;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 /**
  * FXML Controller class
@@ -26,7 +30,8 @@ import javafx.stage.Stage;
  * @author the_k
  */
 public class MatchesListController implements Initializable {
-
+    
+    @FXML private AnchorPane InternalSceneContainer;
     @FXML private ScrollPane scrollPane;
     @FXML private AnchorPane scrollAnchor;
     @FXML private Button MatchContainerButton;
@@ -125,8 +130,50 @@ public class MatchesListController implements Initializable {
         scrollAnchor.getChildren().add(MatchContainerButton); // puttin the button  inside the anchor pane
         MatchContainerButton.setGraphic(new AnchorPane(MatchContainer)); // setting the anchor pane that hold the graphic inside a button mechen tir clickable
         MatchContainer.getChildren().addAll(DateContainer, TimeContainer, HomeTeam, HomeLogo, AwayTeam, AwayLogo, VS);
+}
 
 
-    }    
+public void openStadium(ActionEvent event){
+        RotateTransition RotateStadium = new RotateTransition(Duration.seconds(1), InternalSceneContainer);
+        RotateStadium.setByAngle(360);
+        ScaleTransition ZoomStadium = new ScaleTransition(Duration.seconds(1), InternalSceneContainer);
+        RotateStadium.play();
+        RotateStadium.setOnFinished((e) ->{
+            try{
+                root = FXMLLoader.load(getClass().getResource("StadiumMain.fxml"));
+                InternalSceneContainer.getChildren().removeAll();
+                InternalSceneContainer.getChildren().setAll(root);
+                ZoomStadium.setByX(1.5);
+                ZoomStadium.setByY(1.5);
+                ZoomStadium.play();
+                ZoomStadium.setOnFinished((z) ->{
+                    try{
+                        root = FXMLLoader.load(getClass().getResource("StadiumSection.fxml"));
+                        InternalSceneContainer.getChildren().removeAll();
+                        InternalSceneContainer.getChildren().setAll(root);
+                        ZoomStadium.setToX(1);
+                        ZoomStadium.setToY(1);
+                        ZoomStadium.play();
+                        ZoomStadium.setOnFinished((q) ->{
+                            try{
+                                root = FXMLLoader.load(getClass().getResource("SeatsSelection.fxml"));
+                                InternalSceneContainer.getChildren().removeAll();
+                                InternalSceneContainer.getChildren().setAll(root);
+                            }catch(IOException ex) {
+
+                            }
+                        });
+                    }catch(IOException ex) {
+
+                    }
+                });
+            }catch(IOException ex) {
+
+            }
+        });
+        
+
+    }
+ 
     
 }

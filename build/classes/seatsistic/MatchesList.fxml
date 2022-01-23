@@ -8,14 +8,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="625.0" prefWidth="1280.0" stylesheets="@styling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="InternalSceneContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="625.0" prefWidth="1280.0" stylesheets="@styling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seatsistic.MatchesListController">
    <children>
       <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" prefHeight="625.0" prefWidth="1280.0" styleClass="scrollPane">
         <content>
           <AnchorPane fx:id="scrollAnchor" minHeight="0.0" minWidth="0.0" prefWidth="1280.0" styleClass="scrollAnchor">
                <children>
-                  <Button fx:id="MatchContainerButton" mnemonicParsing="false" prefHeight="170.0" prefWidth="1280.0" styleClass="MatchContainerButton" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <Button fx:id="MatchContainerButton" mnemonicParsing="false" onAction="#openStadium" prefHeight="170.0" prefWidth="1280.0" styleClass="MatchContainerButton" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <graphic>
                         <AnchorPane fx:id="MatchContainer" prefHeight="170.0" prefWidth="1280.0" styleClass="MatchContainer">
                            <children>
@@ -47,6 +46,11 @@
                               <ImageView fx:id="HomeLogo" fitHeight="120.0" fitWidth="120.0" layoutX="415.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" styleClass="HomeLogo" AnchorPane.leftAnchor="460.0" AnchorPane.topAnchor="25.0">
                                  <image>
                                     <Image url="@../img/logos/al_ahed.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="160.0" layoutX="150.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true" rotate="-15.0">
+                                 <image>
+                                    <Image url="@../img/Fully_booked.png" />
                                  </image>
                               </ImageView>
                               <ImageView fx:id="AwayLogo" fitHeight="120.0" fitWidth="120.0" layoutX="720.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" styleClass="AwayLogo" AnchorPane.rightAnchor="460.0" AnchorPane.topAnchor="25.0">

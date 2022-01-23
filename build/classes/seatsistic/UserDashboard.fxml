@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane fx:id="DashboardPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@styling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seatsistic.UserDashboardController">
+<AnchorPane fx:id="DashboardPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="DashboardPane" stylesheets="@styling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seatsistic.UserDashboardController">
    <children>
+      <AnchorPane fx:id="DashboardContentBox" layoutY="95.0" prefHeight="625.0" prefWidth="1280.0" styleClass="DashboardPane" />
       <HBox alignment="TOP_RIGHT" prefHeight="95.0" prefWidth="1280.0" styleClass="UserMenu">
          <children>
             <ImageView fitHeight="92.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
@@ -20,14 +20,33 @@
                   <Image url="@../img/league.png" />
                </image>
             </ImageView>
-            <Label prefHeight="87.0" prefWidth="364.0" text="Get your tickets NOW" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="35.0" />
-               </font>
+            <AnchorPane>
                <HBox.margin>
                   <Insets left="350.0" />
                </HBox.margin>
-            </Label>
+               <children>
+                  <Label prefHeight="56.0" prefWidth="364.0" text="Get your tickets NOW" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="35.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="WelcomUserLabel" layoutX="102.0" layoutY="51.0" text="User Name" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="51.0" text="Welcome" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="261.0" layoutY="45.0" mnemonicParsing="false" styleClass="LogoutButton" text="Logout" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
             <Button graphicTextGap="0.0" mnemonicParsing="false" onAction="#minimizeButton" prefHeight="0.0" prefWidth="0.0" styleClass="Close-button">
                <graphic>
                   <FontAwesomeIconView fill="WHITE" glyphName="MINUS" size="20" />
@@ -49,6 +68,5 @@
             <Insets />
          </opaqueInsets>
       </HBox>
-      <AnchorPane fx:id="DashboardContentBox" layoutY="95.0" prefHeight="625.0" prefWidth="1280.0" />
    </children>
 </AnchorPane>
